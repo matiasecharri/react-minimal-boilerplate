@@ -49,11 +49,13 @@ export const DashboardPanel = () => {
         handleClick={handlePrevPage}
         text="PREV"
         ariaLabel="navigate to previous page"
+        disabled={!prevPage}
       />
       <Button
         handleClick={handleNextPage}
         text="NEXT"
         ariaLabel="navigate to next page"
+        disabled={!nextPage}
       />
       <div className={s.container}>
         {data &&
