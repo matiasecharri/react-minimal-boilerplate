@@ -8,11 +8,15 @@ import {
   FallbackComponent,
   LoaderComponent,
 } from "@/shared/components";
-import { fallbackImage } from "@/shared/utilities";
+import {
+  fallbackImage,
+  getErrorMessage,
+  scrollToTop,
+} from "@/shared/utilities";
 import s from "./DashboardPanel.module.css";
 
 export const DashboardPanel = () => {
-  const { data, fetchData, isLoading, isError } = useFetch<ApiResponse>();
+  const { data, fetchData, isLoading, error } = useFetch<ApiResponse>();
 
   const nextPage = data?.info?.next;
   const prevPage = data?.info?.prev;
@@ -25,9 +29,18 @@ export const DashboardPanel = () => {
     prevPage && fetchData(prevPage);
   };
 
+  const handleReFetch = () => {
+    if (error) fetchData(API_URL_CHARACTERS);
+  };
+
   useEffect(() => {
     fetchData(API_URL_CHARACTERS);
   }, []);
+
+  useEffect(() => {
+    if (!data) return;
+    scrollToTop();
+  }, [data]);
 
   if (isLoading)
     return (
@@ -36,10 +49,16 @@ export const DashboardPanel = () => {
       </DummyWrapper>
     );
 
-  if (isError)
+  if (error)
     return (
       <DummyWrapper className={s.wrapper}>
-        <FallbackComponent message="Error loading dashboard" />
+        <FallbackComponent title="Ooops" message={getErrorMessage(error)}>
+          <Button
+            handleClick={handleReFetch}
+            text="Refresh"
+            ariaLabel="refresh"
+          />
+        </FallbackComponent>
       </DummyWrapper>
     );
 
@@ -57,6 +76,7 @@ export const DashboardPanel = () => {
         ariaLabel="navigate to next page"
         disabled={!nextPage}
       />
+
       <div className={s.container}>
         {data &&
           data.results.map((item) => (
