@@ -7,7 +7,7 @@
 
 A clean, scalable, and developer-friendly React boilerplate built with **Vite**, **TypeScript**, and modern best practices.
 
-This project was designed from scratch to provide a strong foundation for building long-term, maintainable web applications — with a clear folder structure, reusable patterns, and zero clutter.
+This project was designed from scratch to provide a strong foundation for building long-term, maintainable web applications, with a clear folder structure, reusable patterns, and zero clutter.
 
 ---
 
@@ -70,10 +70,10 @@ This project was designed from scratch to provide a strong foundation for buildi
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/react-superlative-boilerplate.git
+git clone https://github.com/maiasecharri/react-superlative-boilerplate.git
 cd react-superlative-boilerplate
 bun install    # or yarn / npm / pnpm install
-bun dev        # or yarn dev / npm / pnpm run dev
+bun run dev        # or yarn dev / npm / pnpm run dev
 ```
 
 ## 🚦 Linting & Formatting
@@ -104,7 +104,7 @@ This boilerplate was built with:
 ## 👨‍💻 Author
 
 Created with passion and attention to detail by [Matias Echarri](https://github.com/matiasecharri).  
-Reach out if you’re using it — I’d love to hear what you build!
+Reach out if you’re using it, I’d love to hear what you build!
 
 ## 📄 License
 
