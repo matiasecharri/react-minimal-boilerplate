@@ -1,0 +1,1 @@
+export const API_URL_CHARACTERS = import.meta.env.VITE_RICK_AND_MORTY_API_URL;
