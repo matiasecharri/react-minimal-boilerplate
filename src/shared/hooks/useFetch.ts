@@ -4,6 +4,7 @@ export const useFetch = <T = unknown>() => {
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+
   const abortControllerRef = useRef<AbortController | null>(null);
 
   const fetchData = async (endpoint: string) => {
@@ -29,8 +30,8 @@ export const useFetch = <T = unknown>() => {
         );
       }
 
-      const data = await response.json();
-      setData(data);
+      const result = await response.json();
+      setData(result);
     } catch (e) {
       if ((e as Error).name === "AbortError") {
         console.log("Fetch aborted due to component unmount or refetch.");
