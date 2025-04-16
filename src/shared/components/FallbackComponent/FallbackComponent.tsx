@@ -1,15 +1,19 @@
 import { ReactNode } from "react";
 
 interface FallbackComponentProps {
-  message: string;
+  title: string;
+  message?: string;
   children?: ReactNode;
 }
 export const FallbackComponent = ({
+  title,
   message,
   children,
 }: FallbackComponentProps) => (
   <>
-    <p>{message}</p>
+    <p>
+      {title}!, {message?.toLowerCase()}
+    </p>
     {children}
   </>
 );
