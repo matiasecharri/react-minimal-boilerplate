@@ -7,7 +7,7 @@
 
 A clean, scalable, and developer-friendly React boilerplate built with **Vite**, **TypeScript**, and modern best practices.
 
-This project was designed from scratch to provide a strong foundation for building long-term, maintainable web applications — with a clear folder structure, reusable patterns, and zero clutter.
+This project was designed from scratch to provide a strong foundation for building long-term, maintainable web applications, with a clear folder structure, reusable patterns, and zero clutter.
 
 ---
 
