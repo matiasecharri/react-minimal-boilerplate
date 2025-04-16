@@ -104,7 +104,7 @@ This boilerplate was built with:
 ## 👨‍💻 Author
 
 Created with passion and attention to detail by [Matias Echarri](https://github.com/matiasecharri).  
-Reach out if you’re using it — I’d love to hear what you build!
+Reach out if you’re using it, I’d love to hear what you build!
 
 ## 📄 License
 
