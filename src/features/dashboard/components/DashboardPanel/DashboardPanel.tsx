@@ -1,7 +1,6 @@
-import { API_URL_CHARACTERS, ApiResponse } from "@/api";
+import { API_URL_CHARACTERS, ApiCharactersResponse } from "@/api";
 import { useEffect } from "react";
 import { useFetch } from "@/shared/hooks";
-import { DashboardCard } from "../DashboardCard";
 import {
   Button,
   DummyWrapper,
@@ -13,10 +12,12 @@ import {
   getErrorMessage,
   scrollToTop,
 } from "@/shared/utilities";
+import { DashboardCard } from "../DashboardCard";
 import s from "./DashboardPanel.module.css";
 
 export const DashboardPanel = () => {
-  const { data, fetchData, isLoading, error } = useFetch<ApiResponse>();
+  const { data, fetchData, isLoading, error } =
+    useFetch<ApiCharactersResponse>();
 
   const nextPage = data?.info?.next;
   const prevPage = data?.info?.prev;
