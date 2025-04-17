@@ -34,7 +34,7 @@ export interface ApiCharacter {
   created?: string;
 }
 
-export interface ApiResponse {
+export interface ApiCharactersResponse {
   info: ApiInfo;
   results: ApiCharacter[];
 }
