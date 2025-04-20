@@ -76,6 +76,15 @@ bun install    # or yarn / npm / pnpm install
 bun run dev        # or yarn dev / npm / pnpm run dev
 ```
 
+## 📄 Environment Setup
+
+Before running the project, create a `.env` file at the root of the project and add the following variable:
+
+VITE_RICK_AND_MORTY_API_URL=https://rickandmortyapi.com/api/character
+
+This value is used as a **placeholder** and points to the [Rick and Morty public API](https://rickandmortyapi.com/).  
+You can replace it with your own API endpoint. Just make sure to follow the structure used in the `api/` folder for compatibility.
+
 ## 🚦 Linting & Formatting
 
 This project comes with:
