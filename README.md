@@ -3,7 +3,7 @@
 ![React](https://img.shields.io/badge/library-react-61DAFB.svg?logo=react&logoColor=black)
 ![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
-# 🧱 react-superlative-boilerplate
+# 🧱 react-minimal-boilerplate
 
 A clean, scalable, and developer-friendly React boilerplate built with **Vite**, **TypeScript**, and modern best practices.
 
@@ -26,7 +26,7 @@ This project was designed from scratch to provide a strong foundation for buildi
 
 > 📝 **Note:** The content inside each folder (like components, models, or features) is just a guide to help you get started — feel free to delete or replace anything based on your own project needs.
 
-- 📦 `react-superlative-boilerplate/`
+- 📦 `react-minimal-boilerplate/`
   - 📁 `public/`
     - 📄 `robots.txt`
     - 📄 `sitemap.xml`
