@@ -10,10 +10,7 @@ export const useFetch = <T = unknown>() => {
   const fetchData = async (endpoint: string) => {
     if (!endpoint) return;
 
-    if (abortControllerRef.current) {
-      abortControllerRef.current.abort();
-    }
-
+    abortControllerRef.current?.abort();
     const controller = new AbortController();
     abortControllerRef.current = controller;
 
@@ -37,10 +34,12 @@ export const useFetch = <T = unknown>() => {
         console.log("Fetch aborted due to component unmount or refetch.");
         return;
       }
-      console.error(e);
-      setError(e as Error);
+
+      if (e instanceof Error) {
+        setError(e);
+      }
     } finally {
-      setIsLoading(false);
+        setIsLoading(false);
     }
   };
 

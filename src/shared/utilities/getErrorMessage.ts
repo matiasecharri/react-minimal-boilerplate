@@ -1,7 +1,7 @@
 export const getErrorMessage = (error: unknown) => {
   if (!(error instanceof Error)) return "An unknown error occurred.";
 
-  const message = error.message.toLowerCase();
+  const message = error.message;
 
   if (message.includes("404")) return "Content not found.";
   if (message.includes("500")) return "Server error.";

@@ -1,6 +1,4 @@
-import { ApiCharacter } from "@/api";
-
-interface DashboardCardProps extends ApiCharacter {}
+import { DashboardCardProps } from "./DashboardCard.models";
 
 export const DashboardCard = ({ name, image }: DashboardCardProps) => {
   return (

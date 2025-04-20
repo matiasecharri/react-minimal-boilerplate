@@ -5,5 +5,6 @@ export interface ButtonProps {
   ariaLabel: string;
   disabled?: boolean;
   children?: ReactNode;
+  className?: string;
   handleClick: () => void;
 }
