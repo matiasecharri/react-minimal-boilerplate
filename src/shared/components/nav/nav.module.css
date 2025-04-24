@@ -1,0 +1,32 @@
+.nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+  padding: 8px 10px;
+}
+
+.nav a {
+  color: #fff;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-family: monospace;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.signin {
+  color: #00ff88;
+}
+
+.signout {
+  color: #ff0062;
+}
