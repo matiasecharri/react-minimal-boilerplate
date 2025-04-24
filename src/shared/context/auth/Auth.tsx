@@ -10,7 +10,6 @@ interface AuthContextProps {
   toggleLogged: () => void;
 }
 
-// Nuevo nombre del contexto
 const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 
 export const useAuth = () => {
