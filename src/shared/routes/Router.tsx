@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AppRoutes } from "./routes.enum";
-import { PrivateGuard } from "./PrivateGuard";
-import { DashboardPanel } from "@/features/dashboard";
 import { useAuth } from "../context/auth";
+import { PrivateGuard } from "../guards";
+import { DashboardPanel } from "@/features/dashboard";
 import { FallbackComponent } from "../components";
 
 interface RouterProps {
