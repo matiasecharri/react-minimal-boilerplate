@@ -1,2 +1,2 @@
-export * from "./dark-mode";
+export * from "./darkMode";
 export * from "./Provider";
