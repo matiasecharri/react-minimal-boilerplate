@@ -4,7 +4,7 @@ enum RoutesPublic {
 }
 
 enum RoutesPrivate {
-  ADMIN = "/admin",
+  DASHBOARD = "/dashboard",
 }
 
 export const AppRoutes = {
