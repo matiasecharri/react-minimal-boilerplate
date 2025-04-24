@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { ButtonProps } from "./Button.model";
+import { ButtonProps } from "./button.model";
 import s from "./Button.module.css";
 
 export const Button = ({
