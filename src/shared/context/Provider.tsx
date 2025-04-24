@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { DarkModeProvider } from "./darkMode";
-import { UserProvider } from "./auth";
+import { AuthProvider } from "./auth";
 
 interface ProviderProps {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface ProviderProps {
 export const Provider = ({ children }: ProviderProps) => {
   return (
     <DarkModeProvider>
-      <UserProvider>{children}</UserProvider>
+      <AuthProvider>{children}</AuthProvider>
     </DarkModeProvider>
   );
 };
