@@ -1,11 +1,14 @@
-import { DashboardPanel } from "@/features/dashboard/components";
+import { Nav } from "@/shared/components";
 import { Provider } from "@/shared/context";
+import { Router } from "@/shared/routes";
 
 export const App = () => {
   return (
     <>
       <Provider>
-        <DashboardPanel />
+        <Router>
+          <Nav />
+        </Router>
       </Provider>
     </>
   );
