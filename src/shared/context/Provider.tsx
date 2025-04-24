@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { DarkModeProvider } from "./darkMode";
-import { UserProvider } from "./user";
+import { UserProvider } from "./auth";
 
 interface ProviderProps {
   children: ReactNode;

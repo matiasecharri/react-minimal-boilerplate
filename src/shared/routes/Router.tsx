@@ -3,7 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AppRoutes } from "./routes.enum";
 import { PrivateGuard } from "./PrivateGuard";
 import { DashboardPanel } from "@/features/dashboard";
-import { useUser } from "../context/user";
+import { useAuth } from "../context/auth";
 import { FallbackComponent } from "../components";
 
 interface RouterProps {
@@ -11,10 +11,11 @@ interface RouterProps {
 }
 
 export const Router = ({ children }: RouterProps) => {
-  const { user } = useUser();
+  const { user } = useAuth();
 
   return (
     <BrowserRouter>
+      {children}
       <Routes>
         <Route
           path={AppRoutes.private.DASHBOARD}
@@ -35,7 +36,6 @@ export const Router = ({ children }: RouterProps) => {
         />
         <Route path="*" element={<Navigate to={"/not-found"} replace />} />
       </Routes>
-      {children}
     </BrowserRouter>
   );
 };

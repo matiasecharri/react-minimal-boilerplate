@@ -1,27 +1,28 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import { User } from "./user.models";
 
-interface UserProviderProps {
+interface AuthProviderProps {
   children: ReactNode;
 }
 
-interface UserContextProps {
+interface AuthContextProps {
   user: User;
   toggleLogged: () => void;
 }
 
-const UserContext = createContext<UserContextProps | undefined>(undefined);
+// Nuevo nombre del contexto
+const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 
-export const useUser = () => {
-  const context = useContext(UserContext);
+export const useAuth = () => {
+  const context = useContext(AuthContext);
 
   if (context === undefined)
-    throw new Error("useUser must be used within <UserProvider>");
+    throw new Error("useAuth must be used within <AuthProvider>");
 
   return context;
 };
 
-export const UserProvider = ({ children }: UserProviderProps) => {
+export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<User>({ name: "Matias", isLogged: false });
 
   const toggleLogged = () =>
@@ -31,8 +32,8 @@ export const UserProvider = ({ children }: UserProviderProps) => {
     }));
 
   return (
-    <UserContext.Provider value={{ user, toggleLogged }}>
+    <AuthContext.Provider value={{ user, toggleLogged }}>
       {children}
-    </UserContext.Provider>
+    </AuthContext.Provider>
   );
 };

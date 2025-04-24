@@ -1,12 +1,12 @@
 import { AppRoutes } from "@/shared/routes";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useUser } from "@/shared/context/user";
+import { useAuth } from "@/shared/context/auth";
 import { Button } from "../button";
 import clsx from "clsx";
 import s from "./nav.module.css";
 
 export const Nav = () => {
-  const { user, toggleLogged } = useUser();
+  const { user, toggleLogged } = useAuth();
   const navigate = useNavigate();
   const btnText = user.isLogged ? "Sign Out" : "Sign In";
   const btnStyles = clsx(s.btn, user.isLogged ? s.signout : s.signin);
