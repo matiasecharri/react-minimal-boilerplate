@@ -1,14 +1,14 @@
 import { Nav } from "@/shared/components";
 import { Provider } from "@/shared/context";
-import { Router } from "@/shared/routes";
+import { AppRouter } from "@/shared/routes";
 
 export const App = () => {
   return (
     <>
       <Provider>
-        <Router>
+        <AppRouter>
           <Nav />
-        </Router>
+        </AppRouter>
       </Provider>
     </>
   );

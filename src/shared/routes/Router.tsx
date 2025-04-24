@@ -10,7 +10,7 @@ interface RouterProps {
   children?: ReactNode;
 }
 
-export const Router = ({ children }: RouterProps) => {
+export const AppRouter = ({ children }: RouterProps) => {
   const { user } = useAuth();
 
   return (
