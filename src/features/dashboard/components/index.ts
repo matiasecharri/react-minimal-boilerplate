@@ -1,2 +1,2 @@
-export * from "./DashboardPanel";
-export * from "./DashboardCard";
+export * from "./dashboardPanel";
+export * from "./dashboardCard";

@@ -1,4 +1,4 @@
-import { DashboardCardProps } from "./DashboardCard.models";
+import { DashboardCardProps } from "./dashboardCard.models";
 
 export const DashboardCard = ({ name, image }: DashboardCardProps) => {
   return (

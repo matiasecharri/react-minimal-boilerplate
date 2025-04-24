@@ -12,7 +12,7 @@ import {
   getErrorMessage,
   scrollToTop,
 } from "@/shared/utilities";
-import { DashboardCard } from "../DashboardCard";
+import { DashboardCard } from "../dashboardCard";
 import clsx from "clsx";
 import s from "./DashboardPanel.module.css";
 import { DashboardPanelSkeleton } from "./DashboardPanelSkeleton";
