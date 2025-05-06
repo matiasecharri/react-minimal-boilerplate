@@ -70,8 +70,8 @@ This project was designed from scratch to provide a strong foundation for buildi
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/maiasecharri/react-superlative-boilerplate.git
-cd react-superlative-boilerplate
+git clone https://github.com/maiasecharri/react-minimal-boilerplate.git
+cd react-minimal-boilerplate
 bun install    # or yarn / npm / pnpm install
 bun run dev        # or yarn dev / npm / pnpm run dev
 ```
